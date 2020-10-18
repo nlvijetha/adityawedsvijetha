@@ -8,6 +8,7 @@
                 <link rel="stylesheet" href="navbar.css">
                     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 			<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
                         <style>
@@ -73,6 +74,16 @@
 			    #profileImage {
 				border-radius: 50%;
 			    }
+			   #divBorder { 
+  				border: 10px solid transparent;
+  				padding: 15px;
+  				border-image: url(border.png) 30 round;
+			    }
+			    #imgInvite {				
+				width: 20px;
+    				height: 20px;
+    				-webkit-mask-box-image: url(invitation.png);
+			    }
                         </style>
                     </head>
                     <body>
@@ -114,11 +125,12 @@
                                                                         <div class="globe"><img class="img_icon_lg" alt="">
 									</div>
                                                                     </div>
-                                                                        <a>
+                                                                        <a id="lnkOurStory">
                                                                             <div class="item">
                                                                                 <div class="merchandise_link" style="margin-right: 10px;">
                                                                                     <div class="merchabdise_link">
                                                                                         <h6>
+											<i style='font-size:24px' class='fas'>&#xf02d;</i>
                                                                                             <span>Our Story</span>
                                                                                         </h6>
                                                                                     </div>
@@ -130,7 +142,7 @@
                                                                                 <div class="merchandise_link" style="margin-right: 10px;">
                                                                                     <div class="merchabdise_link">
                                                                                         <h6>
-                                                                                            <img src="invitation.png" class="slide_h6_img img_icon_xm" alt="">
+                                                                                            <img id="imgInvite" style="background-color: white;" class="slide_h6_img img_icon_xm" alt="">
                                                                                                 <span>Invitation</span>
                                                                                             </h6>
                                                                                         </div>
@@ -153,7 +165,7 @@
                                                                                     <div class="merchandise_link" style="margin-right: 10px;">
                                                                                         <div class="merchabdise_link">
                                                                                             <h6>
-                                                                                                <img src="https://cdn.narendramodi.in/cmsuploads/0.22911500_1567675478_path-184-2x.png" class="slide_h6_img img_icon_xm" alt="">
+												<i class="fa fa fa-map-marker" style="font-size:20px;color:white"></i>                                                                                                
                                                                                                     <span>Venue</span>
                                                                                                 </h6>
                                                                                             </div>
@@ -181,8 +193,9 @@
                                                 </nav>
                                             </div>
                                         </div>
-					<div class="body_card" style="padding-top: 150px;">
-						<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<div id="divOurStory" class="body_card" style="padding-top: 150px;">
+					  <div id="divBorder">
+					   <div id="myCarousel" class="carousel slide" data-ride="carousel">
 					    <!-- Indicators -->
 					    <ol class="carousel-indicators">
 					      <li data-target="#myCarousel" data-slide-to="0" class=""></li>
@@ -215,5 +228,11 @@
 					      <span class="sr-only">Next</span>
 					    </a>
 					  </div>
+					</div>
+					<script>
+						$("#lnkOurStory").click(function(){
+							$("#lnkOurStory").css("display", "block");	
+						});
+					</script>
                                     </body>
                                 </html>
