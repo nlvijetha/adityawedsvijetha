@@ -132,20 +132,20 @@
                                                                                     <div class="merchabdise_link">
                                                                                         <h6>
 											<i class="fa fa-book" style="padding-right: 5px;" aria-hidden="true"></i>
-                                                                                            <span>Our Story</span>
+                                                                                            <span class="spnTabs" id="spnOurStory" style="text-decoration: underline">Our Story</span>
                                                                                         </h6>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </a>
-                                                                        <a>
+                                                                        <a id="lnkInvitation">
                                                                             <div class="item">
                                                                                 <div class="merchandise_link" style="margin-right: 10px;">
                                                                                     <div class="merchabdise_link">
                                                                                         <h6>
 											   <i class="fas fa-scroll" style="font-size: 16px; padding-right: 5px;"></i>
                                                                                             <!-- <img id="imgInvite" style="background-color: white; display: none" class="slide_h6_img img_icon_xm" alt=""> -->
-                                                                                                <span>Invitation</span>
+                                                                                                <span class="spnTabs" id="spnInvitation">Invitation</span>
                                                                                             </h6>
                                                                                         </div>
                                                                                     </div>
@@ -197,7 +197,8 @@
                                                 </nav>
                                             </div>
                                         </div>
-					<div id="divOurStory" class="body_card" style="padding-top: 150px;">
+
+					<div id="divOurStory" class="body_card" style="padding-top: 150px; display: block">
 					  <div id="divBorder">
 					   <div id="myCarousel" class="carousel slide" data-ride="carousel">
 					    <!-- Indicators -->
@@ -232,10 +233,25 @@
 					      <span class="sr-only">Next</span>
 					    </a>
 					  </div>
+					 </div>
+					</div>
+					<div id="divInvitation" class="body_card" style="padding-top: 150px; display: none">
+					  <div id="divBorder">
+					   	<div style="text-align: center; font-size: 24px; color: #E72E77"><b>Wedding Invitation</b></div>
+					  </div>
 					</div>
 					<script>
 						$("#lnkOurStory").click(function(){
-							$("#lnkOurStory").css("display", "block");	
+							$(".body_card").css("display", "none");
+							$("#divOurStory").css("display", "block");
+							$(".spnTabs").css({"text-decoration":"none"});	
+							$("#spnOurStory").css({"text-decoration":"underline"});	
+						});
+						$("#lnkInvitation").click(function(){
+							$(".body_card").css("display", "none");
+							$("#divInvitation").css("display", "block");
+							$(".spnTabs").css({"text-decoration":"none"});
+							$("#spnInvitation").css({"text-decoration":"underline"});	
 						});
 					</script>
                                     </body>
