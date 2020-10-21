@@ -151,13 +151,13 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </a>
-                                                                            <a>
+                                                                            <a id="lnkSafetyPromise">
                                                                                 <div class="item">
                                                                                     <div class="merchandise_link" style="margin-right: 10px;">
                                                                                         <div class="merchabdise_link">
                                                                                             <h6>
 											      <i class="fas fa-shield-alt" style="padding-right: 5px;"></i>
-                                                                                                <span>Safety Promise</span>
+                                                                                                <span class="spnTabs" id="spnSafetyPromise">Safety Promise</span>
                                                                                             </h6>
                                                                                         </div>
                                                                                     </div>
@@ -289,6 +289,16 @@
 	
 					  </div>
 					</div>
+					<div id="divSafetyPromise" class="body_card" style="padding-top: 150px; display: none; color: #04039f">					  
+						<img src="tempCheck.png" alt="Temperature Check at Entry" style="width: 125px; display: block;  margin-left: auto; margin-right: auto;"> 
+						<p style="text-align: center; font-size: 14px; margin-top: 10px;">Temperature Check at Entry Points</p> 
+
+						<img src="seperateTable.png" alt="Temperature Check at Entry" style="width: 125px; display: block;  margin-left: auto; margin-right: auto;"> 
+						<p style="text-align: center; font-size: 14px; margin-top: 10px;">Separate Tables for each family</p>	
+
+						<img src="airMixture.png" alt="Mostly Outside Air" style="width: 125px; display: block;  margin-left: auto; margin-right: auto;"> 
+						<p style="text-align: center; font-size: 14px; margin-top: 10px;">Air-Circulation with 60% outside air</p>				  
+					</div>
 					<script>
 						$("#lnkOurStory").click(function(){
 							$(".body_card").css("display", "none");
@@ -301,6 +311,12 @@
 							$("#divInvitation").css("display", "block");
 							$(".spnTabs").css({"text-decoration":"none"});
 							$("#spnInvitation").css({"text-decoration":"underline"});	
+						});
+						$("#lnkSafetyPromise").click(function(){
+							$(".body_card").css("display", "none");
+							$("#divSafetyPromise").css("display", "block");
+							$(".spnTabs").css({"text-decoration":"none"});
+							$("#spnSafetyPromise").css({"text-decoration":"underline"});	
 						});
 					</script>
                                     </body>
