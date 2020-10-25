@@ -564,8 +564,7 @@
 							$(".clsInvite").css("display", "none");
 							$("#div" + $(this).text()).css("display", "block");
 						});
-						var deadline = new Date("nov 25, 2020 09:17:00").getTime(); 
-  						var days = 0;
+						var deadline = new Date("nov 25, 2020 09:17:00").getTime();
 						var x = setInterval(function() { 
   
 						var now = new Date().getTime(); 
@@ -584,9 +583,10 @@
 						        document.getElementById("day").innerHTML ='0'; 
 						        document.getElementById("hour").innerHTML ='0'; 
 						        document.getElementById("minute").innerHTML ='0' ;  
-						        document.getElementById("second").innerHTML = '0'; } 
+						        document.getElementById("second").innerHTML = '0';
+						} 
 						}, 1000); 
-						if(days === 0){
+						if((Math.floor(deadline - now / (1000 * 60 * 60 * 24))) === 0){
 							$("#divDays").css("display", "none");
 							$("#divSeconds").css("display","block");
 						}
