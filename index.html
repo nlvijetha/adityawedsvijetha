@@ -12,7 +12,6 @@
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-			<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
                         <style>
                             @font-face {
                             font-family: "ITCZapfChanceryStd"; 
@@ -579,10 +578,6 @@
 						document.getElementById("hour").innerHTML =hours; 
 						document.getElementById("minute").innerHTML = minutes;  
 						document.getElementById("second").innerHTML = seconds;  
-						if(days === 0){
-							$("#divDays").css("display", "none");
-							$("#divSeconds").css("display","block");
-						}
 						if (t < 0) { 
 						        clearInterval(x); 
 						        document.getElementById("demo").innerHTML = "TIME UP"; 
@@ -591,15 +586,7 @@
 						        document.getElementById("minute").innerHTML ='0' ;  
 						        document.getElementById("second").innerHTML = '0';
 						} 
-						}, 1000); 
-						
-						function myMap() {
-						var mapProp= {
-						  center:new google.maps.LatLng(51.508742,-0.120850),
-						  zoom:5,
-						};
-						var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-						}						
+						}, 1000); 						
 					</script>
      		    </body>
 </html>
