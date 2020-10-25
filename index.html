@@ -108,7 +108,36 @@
                             border-bottom: 5px solid #E72E77;
 			    color: #E72E77;
 			    font-weight: bold;
-                          }                       
+                          }
+			  hdgCountdownTimer{ 
+			    color: #396; 
+  			    font-weight: 100; 
+			    font-size: 40px; 
+  			  }
+			  #clockdiv{ 
+			    font-family: sans-serif; 
+			    color: #fff; 
+			    display: inline-block; 
+			    font-weight: 100; 
+			    text-align: center; 
+			    font-size: 30px; 
+			  } 
+			  #clockdiv > div{ 
+			    padding: 10px; 
+			    border-radius: 3px; 
+			    background: pink; /*#FFFFFF;#00BF96;*/ 
+			    display: inline-block; 
+			  } 
+			  #clockdiv div > span{ 
+			    padding: 15px; 
+			    border-radius: 3px; 
+			    background: #E72E77; /*#00816A;*/ 
+			    display: inline-block; 
+			  } 
+			  smalltext{ 
+			    padding-top: 5px; 
+			    font-size: 16px; 
+			  }                        
                         </style>
                     </head>
                     <body>
@@ -175,6 +204,18 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </a>
+										<a id="lnkVenue">
+                                                                                   <div class="item">
+                                                                                      <div class="merchandise_link" style="margin-right: 10px;">
+                                                                                        <div class="merchabdise_link">
+                                                                                            <h6>
+												<i class="fa fa fa-map-marker" style="font-size:20px; color: white; padding-right: 5px;"></i>                                                                                                
+                                                                                                    <span class="spnTabs" id="spnVenue">Venue</span>
+                                                                                                </h6>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </a>
                                                                             <a id="lnkSafetyPromise">
                                                                                 <div class="item">
                                                                                     <div class="merchandise_link" style="margin-right: 10px;">
@@ -186,26 +227,14 @@
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                            </a>
-                                                                            <a>
-                                                                                <div class="item">
-                                                                                    <div class="merchandise_link" style="margin-right: 10px;">
-                                                                                        <div class="merchabdise_link">
-                                                                                            <h6>
-												<i class="fa fa fa-map-marker" style="font-size:20px; color: white; padding-right: 5px;"></i>                                                                                                
-                                                                                                    <span>Venue</span>
-                                                                                                </h6>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </a>
-                                                                                <a>
+                                                                            </a>                                                                            
+                                                                                <a id="lnkEvent">
                                                                                     <div class="item">
                                                                                         <div class="merchandise_link" style="margin-right: 10px;">
                                                                                             <div class="merchabdise_link">
                                                                                                 <h6>
 												   <i class="fas fa-gem" style="padding-right: 5px;"></i>
-                                                                                                    <span>Event</span>
+                                                                                                    <span class="spnTabs" id="spnEvent">Event</span>
                                                                                                 </h6>
                                                                                             </div>
                                                                                         </div>
@@ -369,7 +398,9 @@
 						</div>
 					     </div>
 					  </div>
-				
+					<div id="divVenue" class="body_card" style="padding-top: 150px; display: none; color: #04039f">
+						
+					</div>
 					<div id="divSafetyPromise" class="body_card" style="padding-top: 150px; display: none; color: #04039f">					  
 						<img src="tempCheck.png" alt="Temperature Check at Entry" style="width: 125px; display: block;  margin-left: auto; margin-right: auto;"> 
 						<p style="text-align: center; font-size: 14px; margin-top: 10px;">Temperature check at entry</p> 
@@ -386,6 +417,27 @@
 						<img src="dinnerService.png" alt="Contact-less Dinner Service" style="width: 125px; display: block;  margin-left: auto; margin-right: auto;"> 
 						<p style="text-align: center; font-size: 14px; margin-top: 10px;">Contact-less lunch service</p>		  
 					</div>
+					<div id="divEvent" class="body_card" style="padding-top: 150px; display: none; color: #04039f;font-weight: 100; text-align: center">
+						<h1 id="hdgCountdownTimer">Wedding Starts in</h1> 
+						<div id="clockdiv"> 
+  						<div id="divDays"> 
+						    <span class="days" id="day"></span> 
+						    <div class="smalltext">Days</div> 
+						</div> 
+  						<div> 
+  						    <span class="hours" id="hour"></span> 
+  						    <div class="smalltext">Hours</div> 
+  						</div> 
+  						<div> 
+  						    <span class="minutes" id="minute"></span> 
+    						    <div class="smalltext">Minutes</div> 
+  						</div> 
+  						<div id="divSeconds" style="display: none;"> 			
+						    <span class="seconds" id="second"></span> 
+						    <div class="smalltext">Seconds</div> 
+  						</div> 
+						</div> 
+					</div>
 					<script>
 						$("#lnkOurStory").click(function(){
 							$(".body_card").css("display", "none");
@@ -399,11 +451,23 @@
 							$(".spnTabs").css({"text-decoration":"none"});
 							$("#spnInvitation").css({"text-decoration":"underline"});	
 						});
+						$("#lnkVenue").click(function(){
+							$(".body_card").css("display", "none");
+							$("#divVenue").css("display", "block");
+							$(".spnTabs").css({"text-decoration":"none"});
+							$("#spnVenue").css({"text-decoration":"underline"});	
+						});
 						$("#lnkSafetyPromise").click(function(){
 							$(".body_card").css("display", "none");
 							$("#divSafetyPromise").css("display", "block");
 							$(".spnTabs").css({"text-decoration":"none"});
 							$("#spnSafetyPromise").css({"text-decoration":"underline"});	
+						});
+						$("#lnkEvent").click(function(){
+							$(".body_card").css("display", "none");
+							$("#divEvent").css("display", "block");
+							$(".spnTabs").css({"text-decoration":"none"});
+							$("#spnEvent").css({"text-decoration":"underline"});	
 						});
 						$(".clsLanguage").click(function(){
 							$(".clsLanguage").removeClass("active");
@@ -411,7 +475,32 @@
 							$(".clsInvite").css("display", "none");
 							$("#div" + $(this).text()).css("display", "block");
 						});
-						
+						var deadline = new Date("nov 25, 2020 09:17:00").getTime(); 
+  
+						var x = setInterval(function() { 
+  
+						var now = new Date().getTime(); 
+						var t = deadline - now; 
+						var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+						var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+						var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+						var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+						document.getElementById("day").innerHTML =days ; 
+						document.getElementById("hour").innerHTML =hours; 
+						document.getElementById("minute").innerHTML = minutes;  
+						document.getElementById("second").innerHTML = seconds;  
+						if (t < 0) { 
+						        clearInterval(x); 
+						        document.getElementById("demo").innerHTML = "TIME UP"; 
+						        document.getElementById("day").innerHTML ='0'; 
+						        document.getElementById("hour").innerHTML ='0'; 
+						        document.getElementById("minute").innerHTML ='0' ;  
+						        document.getElementById("second").innerHTML = '0'; } 
+						}, 1000); 
+						if(days === 0){
+							$("#divDays").css("display", "none");
+							$("#divSeconds").css("display","block");
+						}						
 					</script>
      		    </body>
 </html>
