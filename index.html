@@ -12,7 +12,7 @@
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	    		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly" defer></script>
+	    		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3_MHIS1xQIkXcghZchd0TY_7jSfc_2uQ&callback=initMap&libraries=&v=weekly" defer></script>
                         <style>
                             @font-face {
                             font-family: "ITCZapfChanceryStd"; 
@@ -199,6 +199,18 @@
                                                                                 </div>
                                                                             </div>
                                                                         </a>
+                                                                        <a id="lnkPhotos">
+                                                                            <div class="item">
+                                                                                <div class="merchandise_link" style="margin-right: 10px;">
+                                                                                    <div class="merchabdise_link">
+                                                                                        <h6>
+											<i class="far fa-image" style="padding-right: 5px;" aria-hidden="true"></i>
+                                                                                            <span class="spnTabs" id="spnPhotos" style="text-decoration: underline">Photos</span>
+                                                                                        </h6>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </a>
                                                                         <a id="lnkInvitation">
                                                                             <div class="item">
                                                                                 <div class="merchandise_link" style="margin-right: 10px;">
@@ -258,9 +270,13 @@
                                                 </nav>
                                             </div>
                                         </div>
-
 					<div id="divOurStory" class="body_card" style="padding-top: 150px; display: block">
-					  <div id="divBorder">
+					 <div id="divBorder">
+					   <img src="ourStoryPink.png" alt="Our Story" style="width:100%;">
+					 </div>
+					</div>
+					<div id="divPhotos" class="body_card" style="padding-top: 150px; display: block">
+					   <div id="divBorder">
 					   <div id="myCarousel" class="carousel slide" data-ride="carousel">
 					    <!-- Indicators -->
 					    <ol class="carousel-indicators">
@@ -272,15 +288,15 @@
 					    <!-- Wrapper for slides -->
 					    <div class="carousel-inner">
 					      <div class="item">
-						<img src="Carousel1.JPG" alt="Los Angeles" style="width:100%;">
+						<img src="Carousel1.JPG" alt="Engagement Pictures 1" style="width:100%;">
 					      </div>
 
 					      <div class="item active">
-						<img src="Carousel2.JPG" alt="Chicago" style="width:100%;">
+						<img src="Carousel2.JPG" alt="Engagement Pictures 2" style="width:100%;">
 					      </div>
 
 					      <div class="item">
-						<img src="Carousel3.JPG" alt="New york" style="width:100%;">
+						<img src="Carousel3.JPG" alt="Engagement Pictures 3" style="width:100%;">
 					      </div>
 					    </div>
 
@@ -538,6 +554,12 @@
 							$("#divOurStory").css("display", "block");
 							$(".spnTabs").css({"text-decoration":"none"});	
 							$("#spnOurStory").css({"text-decoration":"underline"});	
+						});
+						$("#lnkPhotos").click(function(){
+							$(".body_card").css("display", "none");
+							$("#divPhotos").css("display", "block");
+							$(".spnTabs").css({"text-decoration":"none"});	
+							$("#spnPhotos").css({"text-decoration":"underline"});	
 						});
 						$("#lnkInvitation").click(function(){
 							$(".body_card").css("display", "none");
