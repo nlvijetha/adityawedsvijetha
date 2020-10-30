@@ -126,18 +126,18 @@
 			  #clockdiv > div{ 
 			    padding: 10px; 
 			    border-radius: 3px; 
-			    background: rgb(213,211,227); /*#FFFFFF;#00BF96;*/ 
+			    background: rgb(224,203,137); /*#FFFFFF;#00BF96;*/ 
 			    display: inline-block; 
 			  } 
 			  #clockdiv div > span{ 
 			    padding: 15px; 
 			    border-radius: 3px; 
-			    background: rgb(115, 87, 206); /*#00816A;*/ 
+			    background: #E72E77; /*#00816A;*/ 
 			    display: inline-block; 
 			  } 
 			  smalltext{ 
 			    padding-top: 5px; 
-			    font-size: 16px; 
+			    font-size: 16px;
 			  }
 			  #map {
  			    height: 130px;
@@ -145,8 +145,40 @@
     			    display: block;
 			    margin-left: auto;
 			    margin-right: auto;		  
-			  }                        
-                        </style>
+			  } 
+                          #eventBar {
+                            margin: 0;
+                            padding: 0;
+                            list-style: none;
+                            margin-bottom: 5px;
+                            padding-bottom: 27px;
+                            border-bottom: 1px solid pink;
+                            height: 16px;
+                          }
+                          #eventBar li {
+                            float: left;
+                            margin-right: 10px;
+                          }
+                          #eventBar li a {
+                            text-decoration: none;
+                            display: block;
+			    color: #E72E77;
+			    padding-bottom: 5px;
+                          }
+                          #eventBar li a.active {
+                            border-bottom: 5px solid #E72E77;
+			    color: #E72E77;
+			    font-weight: bold;
+                          } 
+			  ul {
+    			   list-style-type: none;
+			  }  
+			  #divStoryBorder { 
+  				border: 10px solid transparent;
+  				padding: 15px;
+  				border-image: url(StoryBorder.png) 30 round;
+			  }                
+                    </style>
                     </head>
                     <body>
                         <div id="container">
@@ -270,29 +302,31 @@
                                                 </nav>
                                             </div>
                                         </div>
-					<div id="divOurStory" class="body_card" style="padding-top: 135px; display: block;">
-					 <!--<div id="divBorder">-->
-					   <img src="OurStoryVintage.png" alt="Our Story" style="width:100%;">
-					 <!--</div>-->
-						<h3 id="hdgCountdownTimer" style="text-align: center;">The countdown has started</h1> 
+					<div id="divOurStory" class="body_card" style="padding-top: 135px; display: block; background-color: rgb(224,203,137);">
+					 <div id="divBorder">
+					   <img src="OurStoryBorderless.png" alt="Our Story" style="width:100%;">
+						<h3 id="hdgCountdownTimer" style="text-align: center; font-family: Courier; font-weight: bold;color: #e72E77;">
+							The countdown has started
+						</h3> 
 						<div id="clockdiv" style="display: block;  margin-left: auto; margin-right: auto;"> 
   							<div id="divDays"> 
 						    		<span class="days" id="day"></span> 
-						    		<div class="smalltext">Days</div> 
+						    		<div class="smalltext" style="text-align: center; font-family: Courier; font-weight: bold;color: #e72E77;">Days</div> 
 							</div> 
   							<div> 
   						    		<span class="hours" id="hour"></span> 
-  						    		<div class="smalltext">Hours</div> 
+  						    		<div class="smalltext" style="text-align: center; font-family: Courier; font-weight: bold;color: #e72E77;">Hours</div> 
   							</div> 
   							<div> 
   						    		<span class="minutes" id="minute"></span> 
-    						    		<div class="smalltext">Mins.</div> 
+    						    		<div class="smalltext" style="text-align: center; font-family: Courier; font-weight: bold;color: #e72E77;">Mins</div> 
   							</div> 
   							<div id="divSeconds" style="display: none;"> 			
 						    		<span class="seconds" id="second"></span> 
-						    		<div class="smalltext">Secs.</div> 
+						    		<div class="smalltext" style="text-align: center; font-family: Courier; font-weight: bold;color: #e72E77;">Sec</div> 
   							</div> 
 						</div> 
+					 </div>
 					</div>
 					<div id="divPhotos" class="body_card" style="padding-top: 150px; display: none">
 					   <div id="divBorder">
@@ -367,7 +401,7 @@
 							<p style="text-align: center; font-size: 16px;"><b>చి|| వేంకట ఆదిత్య </b> <span style="font-size: 12px;">కు</span></p>
 							<p style="text-align: center;">ఇచ్చి వివాహము జరిపించుటకు పెద్దలు నిశ్చయించినారు. </p>
 							<p style="text-align: center; margin-bottom: 0px;">కావున ఏతత్  శుభముహూర్తమునకు తాము సకుటుంబముగా విచ్చేసి</p>
-							<p style="text-align: center;">నూతన వధూవరులను ఆశీర్వదించి భోజన తాంబూలాది సత్కారములను స్వీకరించి మమ్మానందింపజేయ గోరుచున్నాము. </p>	
+							<p style="text-align: center; margin-bottom: 30px;">నూతన వధూవరులను ఆశీర్వదించి భోజన తాంబూలాది సత్కారములను స్వీకరించి మమ్మానందింపజేయ గోరుచున్నాము. </p>	
 
 							<p style="text-align: center; font-size: 14px;"><b><u>సుమూహూర్తము</u></b></p>	
 							<p style="text-align: center;">25-11-2020, బుధవారము ఉదయం 9 గంటల 17 నిముషములకు </p>
@@ -537,19 +571,62 @@
 					</div>					
 					<div id="divEvent" class="body_card" style="padding-top: 150px; display: none; color: #04039f;font-weight: 100; text-align: center">
 						<div style="text-align: center;">
-							<ul id="languageBar" style="display: inline-flex; width: 100%;">
-    								<li style="width: 50.00%; text-align: center;"><a href="#" class="clsLanguage active">Schedule</a>
+							<ul id="eventBar" style="display: inline-flex; width: 100%;">
+    								<li style="width: 50%; text-align: center;"><a href="#" class="clsEventTabs active">Schedule</a>
     								</li>
-    								<li style="width: 50.00%; text-align: center;"><a href="#" class="clsLanguage">Stats for Nerds</a>
+    								<li style="width: 50%; text-align: center;"><a href="#" class="clsEventTabs">Stats for Nerds</a>
     								</li>
 							</ul>
 						</div>
+					    <div id="divSchedule" class="clsEvent">
 						<div id="divBorder">
 						<br>
+						<img src="diya.png" alt="Diya" style="width: 50px; display: block;  margin-left: auto; margin-right: auto;">
 						<br>
-						<img src="diya.png" alt="Ganesh" style="width: 50px; display: block;  margin-left: auto; margin-right: auto;">
-						<br>							
-						</div>						
+
+						<div style="background-color: #E72E77; color: white; margin-bottom: 15px; font-size: 20px;">Monday - 23rd November, 2020</div>
+
+						<p style="text-align: center; font-size: 18px;"><b><u>Harathi</u></b></p>
+						<p style="text-align: center; margin-bottom: 15px;">05:30 a.m. to 06:00 a.m. </p> 
+
+						<p style="text-align: center; font-size: 18px;"><b><u>Pellikoothuru</u></b></p>
+						<p style="text-align: center; margin-bottom: 15px;">05:30 a.m. to 06:00 a.m. </p> 
+
+						<p style="text-align: center; font-size: 18px;"><b><u>Mangala-Snanam</u></b></p>
+						<p style="text-align: center; margin-bottom: 15px;">05:30 a.m. to 06:00 a.m. </p> 
+
+						<p style="text-align: center; font-size: 18px;"><b><u>Ankurarpana</u></b></p>
+						<p style="text-align: center; margin-bottom: 15px;">05:30 a.m. to 06:00 a.m. </p> 
+
+						<div style="background-color: #E72E77; color: white; margin-bottom: 15px; font-size: 20px;">Wednesday - 25th November, 2020</div>
+
+						<p style="text-align: center; font-size: 18px;"><b><u>Swagatha-Sathkaram</u></b></p>
+						<p style="text-align: center; margin-bottom: 15px;">05:30 a.m. to 06:00 a.m. </p> 	
+
+						<p style="text-align: center; font-size: 18px;"><b><u>Edurukolu</u></b></p>
+						<p style="text-align: center; margin-bottom: 15px;">06:00 a.m. to 07:00 a.m. </p> 	
+
+						<p style="text-align: center; font-size: 18px;"><b><u>Ganesh Pooja - Gowri Pooja</u></b></p>
+						<p style="text-align: center; margin-bottom: 15px;">07:00 a.m. to 08:30 a.m. </p> 	
+
+						<p style="text-align: center; font-size: 18px;"><b><u>Kalyanam</u></b></p>
+						<p style="text-align: center; margin-bottom: 15px;">08:30 a.m. to 09:17 a.m. </p> 
+
+						<p style="text-align: center; font-size: 18px;"><b><u>Jeelakarra - Bellam</u></b></p>
+						<p style="text-align: center; margin-bottom: 15px;">09:17 a.m.</p> 
+
+						<p style="text-align: center; font-size: 18px;"><b><u>Dinner Buffet</u></b></p>
+						<p style="text-align: center; margin-bottom: 15px;">12:00 noon</p>
+
+						<p style="text-align: center; font-size: 18px;"><b><u>Appaginthalu</u></b></p>
+						<p style="text-align: center; margin-bottom: 15px;">03:00 p.m.</p>
+
+						<p style="text-align: center; font-size: 18px;"><b><u>High Tea</u></b></p>
+						<p style="text-align: center; margin-bottom: 15px;">03:00 p.m.</p>
+						
+						</div>	
+					    </div>
+					    <div id="divStats" class="clsEvent"></div>					
 					</div>
 					<div id="divSafetyPromise" class="body_card" style="padding-top: 150px; display: none; color: #04039f">					  
 						<img src="tempCheck.png" alt="Temperature Check at Entry" style="width: 125px; display: block;  margin-left: auto; margin-right: auto;"> 
@@ -610,6 +687,19 @@
 							$(this).addClass("active");
 							$(".clsInvite").css("display", "none");
 							$("#div" + $(this).text()).css("display", "block");
+						});
+						$(".clsEventTabs").click(function(){
+							$(".clsEventTabs").removeClass("active");
+							$(this).addClass("active");
+							$(".clsEvent").css("display", "none");
+							if($(this).text() == 'Schedule'){
+								console.log('Schedule');
+								$("#divSchedule").css("display", "block");
+							}
+							else{
+								console.log('stats');
+								$("#divStats").css("display", "block");	
+							}
 						});
 						var deadline = new Date("nov 25, 2020 09:17:00").getTime();
 						var x = setInterval(function() { 
