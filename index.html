@@ -8,6 +8,7 @@
                 <link rel="stylesheet" href="navbar.css">
                     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 			<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	    		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -181,7 +182,16 @@
   				border: 10px solid transparent;
   				padding: 15px;
   				border-image: url(StoryBorder.png) 30 round;
-			  }                
+			  }    
+			 .footer {
+			   position: fixed;
+			   left: 0px;
+			   bottom: 0px;
+			   width: 100%;
+			   background-color: white;
+			   color: blue;
+			   text-align: center;
+			  }            
                     </style>
                     </head>
                     <body>
@@ -235,18 +245,6 @@
                                                                                 </div>
                                                                             </div>
                                                                         </a>
-                                                                        <a id="lnkPhotos">
-                                                                            <div class="item">
-                                                                                <div class="merchandise_link" style="margin-right: 10px;">
-                                                                                    <div class="merchabdise_link">
-                                                                                        <h6>
-											<i class="far fa-image" style="padding-right: 5px;" aria-hidden="true"></i>
-                                                                                            <span class="spnTabs" id="spnPhotos" style="text-decoration: none">Photos</span>
-                                                                                        </h6>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </a>
                                                                         <a id="lnkInvitation" href="#">
                                                                             <div class="item">
                                                                                 <div class="merchandise_link" style="margin-right: 10px;">
@@ -260,18 +258,6 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </a>
-										<a id="lnkVenue">
-                                                                                   <div class="item">
-                                                                                      <div class="merchandise_link" style="margin-right: 10px;">
-                                                                                        <div class="merchabdise_link">
-                                                                                            <h6>
-												<i class="fa fa fa-map-marker" style="font-size:20px; color: white; padding-right: 5px;"></i>                                                                                                
-                                                                                                    <span class="spnTabs" id="spnVenue">Venue</span>
-                                                                                                </h6>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </a>
                                                                             </a>                                                                            
                                                                                 <a id="lnkEvent">
                                                                                     <div class="item">
@@ -285,17 +271,42 @@
                                                                                         </div>
                                                                                     </div>
                                                                                 </a>
+									<a id="lnkVenue">
+                                                                             <div class="item">
+                                                                                 <div class="merchandise_link" style="margin-right: 10px;">
+                                                                                      <div class="merchabdise_link">
+                                                                                          <h6>
+											   <i class="fa fa fa-map-marker" style="font-size:20px; color: white; padding-right: 5px;"></i>                                                                                                
+                                                                                              <span class="spnTabs" id="spnVenue">Venue</span>
+                                                                                           </h6>
+                                                                                       </div>
+                                                                                  </div>
+                                                                               </div>
+                                                                          </a>
+                                                                        <a id="lnkPhotos">
+                                                                            <div class="item">
+                                                                                <div class="merchandise_link" style="margin-right: 10px;">
+                                                                                    <div class="merchabdise_link">
+                                                                                        <h6>
+											<i class="far fa-image" style="padding-right: 5px;" aria-hidden="true"></i>
+                                                                                            <span class="spnTabs" id="spnPhotos" style="text-decoration: none">Photos</span>
+                                                                                        </h6>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </a>
                                                                             <a id="lnkSafetyPromise">
                                                                                 <div class="item">
                                                                                     <div class="merchandise_link" style="margin-right: 10px;">
                                                                                         <div class="merchabdise_link">
                                                                                             <h6>
 											      <i class="fas fa-shield-alt" style="padding-right: 5px;"></i>
-                                                                                                <span class="spnTabs" id="spnSafetyPromise">Safety Promise</span>
+                                                                                                <span class="spnTabs" id="spnSafetyPromise">Safety Assurance</span>
                                                                                             </h6>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
+									    </a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -309,28 +320,29 @@
 					<div id="divOurStory" class="body_card" style="padding-top: 135px; display: block; background-color: rgb(224,203,137);">
 					 <div id="divStoryBorder">
 					   <img src="OurStoryBorderless.png" alt="Our Story" style="width:100%;">
-						<h3 id="hdgCountdownTimer" style="text-align: center; font-family: segoe script; font-weight: bold;color: #e72E77;">
+						<h3 id="hdgCountdownTimer" style="text-align: center; font-family: 'Itim', cursive; font-weight: 500; color: #e72E77;">
 							The countdown has started
 						</h3> 
 						<div id="clockdiv" style="display: block;  margin-left: auto; margin-right: auto;"> 
   							<div id="divDays"> 
 						    		<span class="days" id="day"></span> 
-						    		<div class="smalltext" style="text-align: center; font-family: segoe script; font-weight: bold;color: #e72E77;">Days</div> 
+						    		<div class="smalltext" style="text-align: center; font-family: 'Itim', cursive; font-weight: 500;color: #e72E77;">Days</div> 
 							</div> 
   							<div> 
   						    		<span class="hours" id="hour"></span> 
-  						    		<div class="smalltext" style="text-align: center; font-family: segoe script; font-weight: bold;color: #e72E77;">Hours</div> 
+  						    		<div class="smalltext" style="text-align: center; font-family: 'Itim', cursive; font-weight: 500; color: #e72E77;">Hours</div> 
   							</div> 
   							<div> 
   						    		<span class="minutes" id="minute"></span> 
-    						    		<div class="smalltext" style="text-align: center; font-family: segoe script; font-weight: bold;color: #e72E77;">Mins</div> 
+    						    		<div class="smalltext" style="text-align: center; font-family: 'Itim', cursive; font-weight: 500; color: #e72E77;">Mins</div> 
   							</div> 
   							<div id="divSeconds" style="display: none;"> 			
 						    		<span class="seconds" id="second"></span> 
-						    		<div class="smalltext" style="text-align: center; font-family: segoe script; font-weight: bold;color: #e72E77;">Sec</div> 
+						    		<div class="smalltext" style="text-align: center; font-family: 'Itim', cursive; font-weight: 500; color: #e72E77;">Sec</div> 
   							</div> 
 						</div> 
 					 </div>
+
 					</div>
 					<div id="divPhotos" class="body_card" style="padding-top: 150px; display: none">
 					   <div id="divBorder">
@@ -369,7 +381,7 @@
 					  </div>
 					 </div>
 					</div>
-				<div id="divInvitation" class="body_card" style="padding-top: 150px; display: none; color: #04039f">
+				<div id="divInvitation" class="body_card" style="padding-top: 150px; display: none; color: #04039F">
 						<div style="text-align: center;">
 							<ul id="languageBar" style="display: inline-flex; width: 100%;">
     								<li style="width: 33.33%; text-align: center;"><a href="#" class="clsLanguage active">తెలుగు</a>
@@ -578,59 +590,109 @@
 							<ul id="eventBar" style="display: inline-flex; width: 100%;">
     								<li style="width: 50%; text-align: center;"><a href="#" class="clsEventTabs active">Schedule</a>
     								</li>
-    								<li style="width: 50%; text-align: center;"><a href="#" class="clsEventTabs">Stats for Nerds</a>
+    								<li style="width: 50%; text-align: center;"><a href="#" class="clsEventTabs">Stats</a>
     								</li>
 							</ul>
 						</div>
 					    <div id="divSchedule" class="clsEvent">
 						<div id="divBorder">
 						<br>
+						<div onclick="languageChange();" style="text-align: center;">
+							<img src="LanguageToggleInverted.png" alt="Language Icon" style="width: 30px; margin-bottom: 5px;">
+							<i class="fas fa-angle-down" style="padding-right: 5px;"></i><span style="font-size: 20px; text-decoration: underline;" id="spnEnglishToggle">English</span>
+						</div>
+						<br>
+						<br>
 						<img src="diya.png" alt="Diya" style="width: 50px; display: block;  margin-left: auto; margin-right: auto;">
 						<br>
+						  <div id="divEventEnglish" style="display: block;">
+							<div style="background-color: #E72E77; color: white; margin-bottom: 15px; font-size: 20px;">Tuesday - 22nd November, 2020</div>
 
-						<div style="background-color: #E72E77; color: white; margin-bottom: 15px; font-size: 20px;">Monday - 23rd November, 2020</div>
+							<p style="text-align: center; font-size: 18px;"><b><u>Harathi</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">05:30 a.m. to 06:00 a.m. </p> 
 
-						<p style="text-align: center; font-size: 18px;"><b><u>Harathi</u></b></p>
-						<p style="text-align: center; margin-bottom: 15px;">05:30 a.m. to 06:00 a.m. </p> 
+							<p style="text-align: center; font-size: 18px;"><b><u>Pellikoothuru</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">05:30 a.m. to 06:00 a.m. </p> 
 
-						<p style="text-align: center; font-size: 18px;"><b><u>Pellikoothuru</u></b></p>
-						<p style="text-align: center; margin-bottom: 15px;">05:30 a.m. to 06:00 a.m. </p> 
+							<p style="text-align: center; font-size: 18px;"><b><u>Mangala-Snanam</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">05:30 a.m. to 06:00 a.m. </p> 
 
-						<p style="text-align: center; font-size: 18px;"><b><u>Mangala-Snanam</u></b></p>
-						<p style="text-align: center; margin-bottom: 15px;">05:30 a.m. to 06:00 a.m. </p> 
+							<p style="text-align: center; font-size: 18px;"><b><u>Ankurarpana</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">05:30 a.m. to 06:00 a.m. </p> 
 
-						<p style="text-align: center; font-size: 18px;"><b><u>Ankurarpana</u></b></p>
-						<p style="text-align: center; margin-bottom: 15px;">05:30 a.m. to 06:00 a.m. </p> 
+							<div style="background-color: #E72E77; color: white; margin-bottom: 15px; font-size: 20px;">Wednesday - 25th November, 2020</div>
 
-						<div style="background-color: #E72E77; color: white; margin-bottom: 15px; font-size: 20px;">Wednesday - 25th November, 2020</div>
+							<p style="text-align: center; font-size: 18px;"><b><u>Swagatha-Sathkaram</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">05:30 a.m. to 06:00 a.m. </p> 	
 
-						<p style="text-align: center; font-size: 18px;"><b><u>Swagatha-Sathkaram</u></b></p>
-						<p style="text-align: center; margin-bottom: 15px;">05:30 a.m. to 06:00 a.m. </p> 	
+							<p style="text-align: center; font-size: 18px;"><b><u>Edurukolu</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">06:00 a.m. to 07:00 a.m. </p> 	
 
-						<p style="text-align: center; font-size: 18px;"><b><u>Edurukolu</u></b></p>
-						<p style="text-align: center; margin-bottom: 15px;">06:00 a.m. to 07:00 a.m. </p> 	
+							<p style="text-align: center; font-size: 18px;"><b><u>Ganesh Pooja - Gowri Pooja</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">07:00 a.m. to 08:30 a.m. </p> 	
 
-						<p style="text-align: center; font-size: 18px;"><b><u>Ganesh Pooja - Gowri Pooja</u></b></p>
-						<p style="text-align: center; margin-bottom: 15px;">07:00 a.m. to 08:30 a.m. </p> 	
+							<p style="text-align: center; font-size: 18px;"><b><u>Kalyanam</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">08:30 a.m. to 09:17 a.m. </p> 
 
-						<p style="text-align: center; font-size: 18px;"><b><u>Kalyanam</u></b></p>
-						<p style="text-align: center; margin-bottom: 15px;">08:30 a.m. to 09:17 a.m. </p> 
+							<p style="text-align: center; font-size: 18px;"><b><u>Jeelakarra - Bellam</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">09:17 a.m.</p> 
 
-						<p style="text-align: center; font-size: 18px;"><b><u>Jeelakarra - Bellam</u></b></p>
-						<p style="text-align: center; margin-bottom: 15px;">09:17 a.m.</p> 
+							<p style="text-align: center; font-size: 18px;"><b><u>Dinner Buffet</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">12:00 noon</p>
 
-						<p style="text-align: center; font-size: 18px;"><b><u>Dinner Buffet</u></b></p>
-						<p style="text-align: center; margin-bottom: 15px;">12:00 noon</p>
+							<p style="text-align: center; font-size: 18px;"><b><u>Appaginthalu</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">03:00 p.m.</p>
 
-						<p style="text-align: center; font-size: 18px;"><b><u>Appaginthalu</u></b></p>
-						<p style="text-align: center; margin-bottom: 15px;">03:00 p.m.</p>
+							<p style="text-align: center; font-size: 18px;"><b><u>High Tea</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">03:00 p.m.</p>
+						  </div>
 
-						<p style="text-align: center; font-size: 18px;"><b><u>High Tea</u></b></p>
-						<p style="text-align: center; margin-bottom: 15px;">03:00 p.m.</p>
-						
+						  <div id="divEventTelugu" style="display: none;">
+							<div style="background-color: #E72E77; color: white; margin-bottom: 15px; font-size: 20px;">ఆదివారము  - 22 నవంబర్, 2020</div>
+
+							<p style="text-align: center; font-size: 18px;"><b><u>హారతి</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">ఉదయం 05:30 to 06:00 వరకు </p> 
+
+							<p style="text-align: center; font-size: 18px;"><b><u>పెళ్లికూతురు</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">ఉదయం 05:30 నుండి  06:00 వరకు  </p> 
+
+							<p style="text-align: center; font-size: 18px;"><b><u>మంగళ - స్నానం</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">ఉదయం 05:30 నుండి 06:00 వరకు  </p> 
+
+							<p style="text-align: center; font-size: 18px;"><b><u>అంకురార్పణ </u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">ఉదయం 05:30 నుండి  06:00 వరకు  </p> 
+
+							<div style="background-color: #E72E77; color: white; margin-bottom: 15px; font-size: 20px;">బుధవారం  - 25 నవంబర్, 2020</div>
+
+							<p style="text-align: center; font-size: 18px;"><b><u>స్వాగత - సత్కారం</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">ఉదయం 05:30 నుండి 06:00 వరకు </p> 	
+
+							<p style="text-align: center; font-size: 18px;"><b><u>ఎదురుకోలు</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">ఉదయం 06:00 నుండి 07:00 వరకు </p> 	
+
+							<p style="text-align: center; font-size: 18px;"><b><u>గణేష్ పూజ - గౌరీ పూజ </u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">ఉదయం 07:00 నుండి 08:30 వరకు </p> 	
+
+							<p style="text-align: center; font-size: 18px;"><b><u>కళ్యాణం</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">ఉదయం 08:30 నుండి 09:17 వరకు </p> 
+
+							<p style="text-align: center; font-size: 18px;"><b><u>జీలకర్ర - బెల్లం </u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">ఉదయం 09:17 </p> 
+
+							<p style="text-align: center; font-size: 18px;"><b><u>విందు</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">మధ్యాహ్నం  12:00 నుండి</p>
+
+							<p style="text-align: center; font-size: 18px;"><b><u>అప్పగింతలు </u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">మధ్యాహ్నం  03:00 నుండి</p>
+
+							<p style="text-align: center; font-size: 18px;"><b><u>High Tea</u></b></p>
+							<p style="text-align: center; margin-bottom: 15px;">మధ్యాహ్నం 03:00 తరువాత</p>
+						  </div>						
 						</div>	
 					    </div>
-					    <div id="divStats" class="clsEvent"></div>					
+					    <div id="divStats" class="clsEvent" style="display: inline-block; margin: 0px auto; text-align: center;">		
+						More here on the day of event....
+					    </div>					
 					</div>
 					<div id="divSafetyPromise" class="body_card" style="padding-top: 150px; display: none; color: #04039f">					  
 						<img src="tempCheck.png" alt="Temperature Check at Entry" style="width: 125px; display: block;  margin-left: auto; margin-right: auto;"> 
@@ -648,7 +710,10 @@
 						<img src="dinnerService.png" alt="Contact-less Dinner Service" style="width: 125px; display: block;  margin-left: auto; margin-right: auto;"> 
 						<p style="text-align: center; font-size: 14px; margin-top: 10px;">Contact-less lunch service</p>		  
 					</div>
-					<footer id="footer_content" class="navbar-fixed-bottom" style="display: block;"><div class="footer_component"></div></footer>
+					<div class="footer">
+					  <span style="font-size: 9px;">Created by Vikas Nimmagadda.</span>
+					  <img id="profilePicture" src="Vikas.jpg" alt="Avatar" style="width:40px; border-radius: 50%; display: none;">
+					</div>
 					<script>
 						$("#lnkOurStory").click(function(){
 							$(".body_card").css("display", "none");
@@ -686,6 +751,18 @@
 							$(".spnTabs").css({"text-decoration":"none"});
 							$("#spnEvent").css({"text-decoration":"underline"});	
 						});
+						function languageChange(){
+							if($("#spnEnglishToggle").text() == 'English'){
+								$("#spnEnglishToggle").text('తెలుగు');
+								$("#divEventEnglish").css("display", "none");
+								$("#divEventTelugu").css("display", "block");	
+							}
+							else {
+								$("#spnEnglishToggle").text('English');
+								$("#divEventEnglish").css("display", "block");
+								$("#divEventTelugu").css("display", "none");	
+							}
+						}
 						$(".clsLanguage").click(function(){
 							$(".clsLanguage").removeClass("active");
 							$(this).addClass("active");
@@ -695,15 +772,8 @@
 						$(".clsEventTabs").click(function(){
 							$(".clsEventTabs").removeClass("active");
 							$(this).addClass("active");
-							$(".clsEvent").css("display", "none");
-							if($(this).text() == 'Schedule'){
-								console.log('Schedule');
-								$("#divSchedule").css("display", "block");
-							}
-							else{
-								console.log('stats');
-								$("#divStats").css("display", "block");	
-							}
+							$(".clsEvent").css("display", "none");							
+							$("#div" + $(this).text()).css("display", "block");
 						});
 						var deadline = new Date("nov 25, 2020 09:17:00").getTime();
 						var x = setInterval(function() { 
