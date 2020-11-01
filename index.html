@@ -224,7 +224,92 @@
 				width: 75%;
 			  	border: 3px solid rgb(224,203,137);
   				padding: 10px;
-			   }        
+			   } 
+                        .myImg {
+                          border-radius: 5px;
+                          cursor: pointer;
+                          transition: 0.3s;
+                        }
+
+                        .myImg:hover {opacity: 0.7;}
+
+                        /* The Modal (background) */
+                        .modal {
+                          display: none; /* Hidden by default */
+                          position: fixed; /* Stay in place */
+                          z-index: 16; /* Sit on top */
+                          padding-top: 100px; /* Location of the box */
+                          left: 0;
+                          top: 0;
+                          width: 100%; /* Full width */
+                          height: 100%; /* Full height */
+                          overflow: auto; /* Enable scroll if needed */
+                          background-color: rgb(0,0,0); /* Fallback color */
+                          background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+                        }
+
+                        /* Modal Content (image) */
+                        .modal-content {
+                          margin: auto;
+                          display: block;
+                          width: 80%;
+                          max-width: 700px;
+                        }
+
+                        /* Caption of Modal Image */
+                        #caption {
+                          margin: auto;
+                          display: block;
+                          width: 80%;
+                          max-width: 700px;
+                          text-align: center;
+                          color: #ccc;
+                          padding: 10px 0;
+                          height: 150px;
+                        }
+
+                        /* Add Animation */
+                        .modal-content, #caption {  
+                          -webkit-animation-name: zoom;
+                          -webkit-animation-duration: 0.6s;
+                          animation-name: zoom;
+                          animation-duration: 0.6s;
+                        }
+
+                        @-webkit-keyframes zoom {
+                          from {-webkit-transform:scale(0)} 
+                          to {-webkit-transform:scale(1)}
+                        }
+
+                        @keyframes zoom {
+                          from {transform:scale(0)} 
+                          to {transform:scale(1)}
+                        }
+
+                        /* The Close Button */
+                        .close {
+                          position: absolute;
+                          top: 15px;
+                          right: 35px;
+                          color: #f1f1f1;
+                          font-size: 40px;
+                          font-weight: bold;
+                          transition: 0.3s;
+                        }
+
+                        .close:hover,
+                        .close:focus {
+                          color: #bbb;
+                          text-decoration: none;
+                          cursor: pointer;
+                        }
+
+                        /* 100% Image Width on Smaller Screens */
+                        @media only screen and (max-width: 700px){
+                          .modal-content {
+                            width: 100%;
+                          }
+                        }       
                     </style>
                     </head>
                     <body>
@@ -322,7 +407,7 @@
                                                                                     <div class="merchabdise_link">
                                                                                         <h6>
 											<i class="far fa-image" style="padding-right: 5px;" aria-hidden="true"></i>
-                                                                                            <span class="spnTabs" id="spnPhotos" style="text-decoration: none">Photos</span>
+                                                                                            <span class="spnTabs" id="spnPhotos" style="text-decoration: none">Gallery</span>
                                                                                         </h6>
                                                                                     </div>
                                                                                 </div>
@@ -384,7 +469,7 @@
 					    <ol class="carousel-indicators">
 					      <li data-target="#myCarousel" data-slide-to="0" class=""></li>
 					      <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
-					      <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+					      <!--<li data-target="#myCarousel" data-slide-to="2" class=""></li>-->
 					    </ol>
 
 					    <!-- Wrapper for slides -->
@@ -393,11 +478,11 @@
 						<img src="Carousel1.JPG" alt="Engagement Pictures 1" style="width:100%;">
 					      </div>
 
-					      <div class="item active">
+					      <!--<div class="item active">
 						<img src="Carousel2.JPG" alt="Engagement Pictures 2" style="width:100%;">
-					      </div>
+					      </div>-->
 
-					      <div class="item">
+					      <div class="item active">
 						<img src="Carousel3.JPG" alt="Engagement Pictures 3" style="width:100%;">
 					      </div>
 					    </div>
@@ -413,6 +498,30 @@
 					    </a>
 					  </div>
 					 </div>
+					<div style="margin-top: 5px;">
+						<table style="margin: 20px;">
+							<tr>
+								<td><img class="myImg" src="Gallery3.JPG" alt="Memories" style="width: 100%;" onclick="modalOpen('Gallery3.JPG');"></td>
+								<td><img class="myImg" src="Gallery5.JPG" alt="Memories" style="width: 100%; margin-top: -25px;" onclick="modalOpen('Gallery5.JPG');"></td>
+							</tr>
+							<tr>
+								<td><img class="myImg" src="Gallery4.JPG" alt="Memories" style="width: 100%;" onclick="modalOpen('Gallery4.JPG');"></td>
+								<td><img class="myImg" src="Gallery1.JPG" alt="Memories" style="width: 100%; margin-top: -70px;" onclick="modalOpen('Gallery1.JPG');"></td>
+							</tr>
+							<tr>
+								<td><img class="myImg" src="Gallery7.JPG" alt="Memories" style="width: 100%; margin-top: -45px;" onclick="modalOpen('Gallery7.JPG');"></td>
+								<td><img class="myImg" src="Gallery6.JPG" alt="Memories" style="width: 100%; margin-top: -45px;" onclick="modalOpen('Gallery6.JPG');"></td>
+							</tr>
+							<tr>
+								<td><img class="myImg" src="Gallery8.JPG" alt="Memories" style="width: 100%; margin-top: -45px;" onclick="modalOpen('Gallery8.JPG');"></td>
+							</tr>
+						</table>
+						<div id="myModal" class="modal">
+						  <span class="close" style="margin-top: 140px;">&times;</span>
+						  <img class="modal-content" id="img01" style="margin-top: 140px;">
+						  <div id="caption"></div>
+						</div>												
+					</div>
 					</div>
 				<div id="divInvitation" class="body_card" style="padding-top: 150px; display: none; color: #04039F">
 						<div style="text-align: center;">
@@ -759,7 +868,7 @@
 							<p style="margin: 15px 0px 25px 0px; font-size: 15px; text-align: center;">3. Please avoid congregation to the extent possible</p>
 							<p style="margin: 15px 0px 25px 0px; font-size: 15px; text-align: center;">4. Please sanitize your hands regularly</p>
 						    </div>
-							<p style="text-align: center; font-family: itim; margin-top: 50px; font-size: 20px;">Let's have a safe and pleasant gathering.</p>
+							<p style="text-align: center; font-family: itim; margin-top: 50px; font-size: 20px;">Let's have a safe and pleasant celebration.</p>
 						</div>	  
 					</div>
 					<div class="footer">
@@ -879,6 +988,25 @@
 					   		position: hyatt,
  					   		map: map,
  					 	});
+						}
+						var modal = document.getElementById("myModal");
+
+						// Get the image and insert it inside the modal - use its "alt" text as a caption
+						var modalImg = document.getElementById("img01");
+						var captionText = document.getElementById("caption");
+
+						function modalOpen(src){
+						  modal.style.display = "block";
+						  modalImg.src = src;
+						  captionText.innerHTML = 'Gallery Image';
+						}
+
+						// Get the <span> element that closes the modal
+						var span = document.getElementsByClassName("close")[0];
+
+						// When the user clicks on <span> (x), close the modal
+						span.onclick = function() { 
+						  modal.style.display = "none";
 						}						
 					</script>
      		    </body>
