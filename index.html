@@ -383,7 +383,7 @@
                                                                                             <div class="merchabdise_link">
                                                                                                 <h6>
 												   <i class="fas fa-gem" style="padding-right: 5px;"></i>
-                                                                                                    <span class="spnTabs" id="spnEvent">Event</span>
+                                                                                                    <span class="spnTabs" id="spnEvent">Events</span>
                                                                                                 </h6>
                                                                                             </div>
                                                                                         </div>
@@ -890,7 +890,11 @@
 					</div>
 					<div class="footer">
 					  <span style="font-size: 9px;">Created by Vikas Nimmagadda.</span>
-					</div>
+					</div>						<div id="videoModal" class="modal">
+						  <span class="closeVideo" style="margin-top: 140px; opacity: 1">&times;</span>
+						  <iframe class="modal-content" id="vid01" style="margin-top: 140px;"></iframe>
+						  <div id="teaserCaption"></div>
+						</div>
 					<script>
 						$("#lnkOurStory").click(function(){
 							$(".body_card").css("display", "none");
@@ -1012,7 +1016,27 @@
 						// When the user clicks on <span> (x), close the modal
 						span.onclick = function() { 
 						  modal.style.display = "none";
-						}						
+						}	
+
+						var modal = document.getElementById("videoModal");
+
+						// Get the image and insert it inside the modal - use its "alt" text as a caption
+						var videoImg = document.getElementById("vid01");
+						var captionText = document.getElementById("teaserCaption");
+
+						function videoOpen(){
+						  modal.style.display = "block";
+						  videoImg.src = 'https://www.youtube.com/embed/Qitxh_NORCk';
+						  captionText.innerHTML = 'Teaser';
+						}
+
+						// Get the <span> element that closes the modal
+						var spanVideo = document.getElementsByClassName("closeVideo")[0];
+
+						// When the user clicks on <span> (x), close the modal
+						spanVideo.onclick = function() { 
+						  modal.style.display = "none";
+						}					
 					</script>
      		    </body>
 </html>
